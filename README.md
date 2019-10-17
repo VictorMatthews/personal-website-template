@@ -30,7 +30,7 @@ When making changes locally you can run `ng serve` for a dev server. Navigate to
 
 ## Example
 
-![Photo 1](https://github.com/VictorMatthews/personal-website-template/tree/develop/src/assets/readme-photos/1.png)
+![Photo 1](https://github.com/VictorMatthews/personal-website-template/src/assets/readme-photos/1.png)
 
 ![Photo 2](https://github.com/VictorMatthews/personal-website-template/tree/develop/src/assets/readme-photos/2.png)
 
