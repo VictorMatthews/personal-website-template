@@ -27,3 +27,15 @@ You can now go to username.github.io and see your website
 ## Development server
 
 When making changes locally you can run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Example
+
+(https://github.com/VictorMatthews/personal-website-template/tree/develop/src/assets/readme-photos/1.png)
+
+(https://github.com/VictorMatthews/personal-website-template/tree/develop/src/assets/readme-photos/2.png)
+
+(https://github.com/VictorMatthews/personal-website-template/tree/develop/src/assets/readme-photos/3.png)
+
+(https://github.com/VictorMatthews/personal-website-template/tree/develop/src/assets/readme-photos/4.png)
+
+(https://github.com/VictorMatthews/personal-website-template/tree/develop/src/assets/readme-photos/5.png)
