@@ -1,6 +1,6 @@
 # personal-website-template
 
-This is a template for a personal website with a desktop and mobile menu
+This is a template for a personal website with a dynamic desktop and mobile menu
 
 ## Create a template of this as a new repo
 
