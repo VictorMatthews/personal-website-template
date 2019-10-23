@@ -1,8 +1,8 @@
-import {MediaMatcher} from '@angular/cdk/layout';
+import { MediaMatcher } from '@angular/cdk/layout';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatIconRegistry } from '@angular/material/icon';
-import { NavService } from './shared/services/nav.service';
 import { Component, ChangeDetectorRef, OnDestroy, ViewChild } from '@angular/core';
+import { Ui } from './shared/services/ui.service';
 
 @Component({
   selector: 'app-root',
@@ -10,23 +10,14 @@ import { Component, ChangeDetectorRef, OnDestroy, ViewChild } from '@angular/cor
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnDestroy {
-  @ViewChild('snav', {static: false}) snav: MatSidenav;
+  @ViewChild('menu', {static: false}) menu: MatSidenav;
 
-  mobileQuery: MediaQueryList;
-  // tslint:disable-next-line:variable-name
-  private _mobileQueryListener: () => void;
+  constructor(private ui: Ui, matIconRegistry: MatIconRegistry) {
 
-  constructor(cdf: ChangeDetectorRef, media: MediaMatcher, matIconRegistry: MatIconRegistry, private navService: NavService) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => cdf.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-
-    // Add custom material icons
     matIconRegistry.registerFontClassAlias('fa');
     matIconRegistry.registerFontClassAlias('fab');
 
-    // close nav on mobile
-    this.navService.target.subscribe(data => {
+    this.ui.target.subscribe(data => {
       setTimeout(() => {
         this.closeSideNav();
       }, 1000);
@@ -34,12 +25,11 @@ export class AppComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 
   closeSideNav() {
-    if (this.mobileQuery.matches) { // mobile
-      this.snav.close();
+    if (this.ui.isMobile()) {
+      this.menu.close();
     }
   }
 }

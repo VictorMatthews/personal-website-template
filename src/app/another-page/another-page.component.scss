@@ -7,6 +7,12 @@ header {
 
 .paragraph {
     max-width: 980px;
-    // margin: 50px auto;
     margin: 0 auto;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.content {
+  padding-bottom: 50px;
+  background-color: $background;
 }

@@ -1,0 +1,12 @@
+@import '../../../variables';
+
+.landing {
+    background-image: url(/assets/images/home/intro.png);
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: $white;
+    mat-icon {
+        vertical-align: baseline;
+    }
+}

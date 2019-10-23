@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Ui} from "../shared/services/ui.service";
 
 @Component({
   selector: 'app-another-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnotherPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public ui: Ui) { }
 
   ngOnInit() {
   }
